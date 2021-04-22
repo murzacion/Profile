@@ -123,6 +123,7 @@ a {
   font-size: 3rem;
   font-weight: 250;
   font-style: italic;
+  text-align: center;
   color: var(--main-red);
 }
 
@@ -233,13 +234,59 @@ a {
   flex-wrap: wrap;
 }
 
+.contact-details {
+  font-size: 2.4rem;
+  text-shadow: 2px 2px 1px #1f1f1f;
+}
 .btn {
   display: inline-block;
   padding: 1rem 2rem;
   border-radius: 2px;
 }
 
-.contact-details {
-  font-size: 2.4rem;
-  text-shadow: 2px 2px 1px #1f1f1f;
+.btn-show-all {
+  font-size: 2rem;
+  background: var(--main-gray);
+  transition: background 0.3s ease-out;
+}
+
+.btn-show-all:hover {
+  background: var(--main-red);
+}
+
+.btn-show-all:hover > i {
+  transform: translateX(2px);
+}
+
+.btn-show-all > i {
+  margin-left: 10px;
+  transform: translateX(0);
+  transition: transform 0.3s ease-out;
+}
+footer {
+  font-weight: 300;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2rem;
+  background-color: #000;
+  background-image: linear-gradient(
+    115deg,
+    rgba(34, 49, 43, 0.8),
+    rgba(12, 12, 51, 0.7)
+  );
+  border-top: 4px solid var(--main-red);
+}
+footer > p {
+  margin: 2rem;
+}
+
+footer i {
+  vertical-align: middle;
+}
+
+@media (max-width: 28.75em) {
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
 }
